@@ -1,0 +1,85 @@
+p {
+    padding: 0;
+    margin: 0;
+  }
+  
+  button {
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  @import './nav.scss';
+  @import './desc.scss';
+  @import './main.scss';
+  
+  .body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: #776e65;
+  }
+  
+  .container {
+    position: relative;
+    width: 375px;
+    height: 667px;
+    position: fixed;
+    background-color: #faf8ef;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 78px;
+    img{
+      width: 36px;
+      height: 36px;
+    }
+    span{
+      margin-left: 16px;
+      font-size: 20px;
+      color: #8f7a67;
+      font-weight: 500;
+    }
+  }
+  //定义了一个遮罩层，覆盖在其他内容之上
+  .mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;//将元素的左、右、上和下位置都设置为0，即填满父元素的整个可见区域
+    display: none;//将元素的显示方式设置为隐藏，即初始状态下不可见
+    flex-direction: column;//设置子元素在容器中的排列方向为垂直列（从上到下）
+    align-items: center;//在垂直方向上将子元素居中对齐
+    justify-content: center;//在水平方向上将子元素居中对齐
+    background-color: rgba(255, 255, 255, 0.4);
+  
+    .content {
+      font-family: Arial-Black;
+      font-size: 26px;
+      color: #8f7a67;
+      text-align: center;
+    }
+  
+    button {
+      margin-top: 20px;
+      width: 98px;
+      height: 44px;
+      background: #8f7a67;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #ffffff;
+      text-align: center;
+      font-family: Arial-Black;
+      font-weight: 700;
+      line-height: 44px;
+    }
+  }
+  
